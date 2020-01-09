@@ -1,5 +1,5 @@
 # PHP Practice
-Short php practice progams
+Short PHP practice progams
 
 Multiple updations possible
 
