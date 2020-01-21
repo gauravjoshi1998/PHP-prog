@@ -83,7 +83,7 @@
             </form>
 
             <?php
-            	if (isset($_POST['submit'])){
+            	if (!isset($_POST['submit'])){
           			echo "<h2>Your Input:</h2>";
           			echo "Name:<h4>$name<h4>";
           			echo "<br>";
