@@ -5,7 +5,6 @@ LastName,
 Age,
 Hometown,
 Job.
-
 and insert 4 values each.
 Demos have been used for names option, you can insert your values in the html file.
 
