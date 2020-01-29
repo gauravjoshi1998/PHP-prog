@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX-SQL</title>
+	<script>
+		function showUser(str)
+		{
+			if(str == ""){
+				document.getElementById("txtHint").innerHTML = "";
+			}
+			else{
+				if(window.XMLHttpRequest){
+					xmlhttp = new XMLHttpRequest();
+				}
+			}
+			xmlhttp.onreadystatechange = function(){
+				if(this.state = 4 && this.status = 200){
+					document.getElementById("txtHint").innerHTML = this.responseText;
+				}
+			}
+			xmlhttp.open("GET","user.php?q="+str,true);
+        	xmlhttp.send();
+		}
+	</script>
+</head>
+
+<body>
+
+<form>
+	<select name = "Users" onchange="showUser(this.value)">
+	  <option value="">Select a person:</option>
+	  <option value="1">Gaurav</option>
+	  <option value="2">Harsh</option>
+	  <option value="3">Harshil</option>
+	  <option value="4">Manish</option>
+	</select>
+</form>
+<br>
+<div id="txtHint"><b>To list the table</b></div>
+
+</body>
+</html>
